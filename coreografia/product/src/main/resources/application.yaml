@@ -1,0 +1,28 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: coreografia
+  kafka:
+    bootstrap-servers: localhost:9092
+  cloud:
+    stream:
+      kafka:
+        streams:
+          binder:
+            functions:
+              consumerProduct:
+                applicationId: consumerProduct
+
+      function:
+        definition: consumerProduct;
+      bindings:
+        consumerProduct-in-0:
+          destination: orders.buy
+          consumer:
+            maxAttempts: 1

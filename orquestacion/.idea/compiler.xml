@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="orderRequest" />
+        <module name="stock" />
+        <module name="productRequest" />
+        <module name="eureka" />
+        <module name="gateway-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka" target="1.8" />
+      <module name="gateway-service" target="1.8" />
+      <module name="orderRequest" target="1.8" />
+      <module name="productRequest" target="11" />
+      <module name="stock" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="orderRequest" options="-parameters" />
+      <module name="productRequest" options="-parameters" />
+      <module name="stock" options="-parameters" />
+    </option>
+  </component>
+</project>
